@@ -13,7 +13,7 @@ const Button = ({ variant, size, children }) => {
     case "ghost":
       return <ButtonGhost style={style}>{children}</ButtonGhost>;
     default:
-      return null;
+      throw new Error(`Unrecognized Button variant: ${variant}`);
   }
 };
 
